@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <style> 
+            .Banner {
+                width: 1000px;
+                height: auto;
+            }
+        </style>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Login</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <style>
+            body {
+                background-color: white;
+            }
+
+        </style>
+    </head>>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <div class="logo-container">
+    <img src="Resources/Images/Banner.png" alt="Cloud Mart Banner" class="Banner">
+</div>
+
+
+        
+
+        <label for="username">Username:</label><br>
+        <input type="text" id="username"><br><br>
+
+        <label for="password">Password:</label><br>
+        <input type="password" id="password"><br><br>
+
+        <button id="loginBtn">Login</button>
+
+        <p id="message"></p>
+
+        <script>
+            // Hardcoded credentials (ONLY for practice/demo)
+            const CORRECT_USER = "admin";
+            const CORRECT_PASS = "1234";
+
+            document.getElementById("loginBtn").addEventListener("click", function () {
+                const user = document.getElementById("username").value;
+                const pass = document.getElementById("password").value;
+
+                if (user === CORRECT_USER && pass === CORRECT_PASS) {
+                    document.getElementById("message").innerText = "Login successful!";
+                    
+                    // Optional: redirect to another page after success
+                    // window.location.href = "dashboard.html";
+                } else {
+                    document.getElementById("message").innerText = "Invalid login.";
+                }
+            });
+        </script>
+
+        <script src="" async defer></script>
+    </body>
+</html>
