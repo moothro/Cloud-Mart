@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CloudMart | Sign in</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    /* ===== Page background ===== */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: #e8eefc;
+      background:
+        radial-gradient(1200px 600px at 20% 10%, #1a3a7a 0%, rgba(26, 58, 122, 0) 60%),
+        radial-gradient(900px 500px at 80% 30%, #0b5aa8 0%, rgba(11, 90, 168, 0) 55%),
+        linear-gradient(180deg, #060b1a 0%, #050814 100%);
+      min-height: 100vh;
+    }
+
+    /* ===== Navbar ===== */
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 28px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(0, 0, 0, 0.15);
+      backdrop-filter: blur(10px);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: inherit;
+      font-weight: 700;
+    }
+
+    /* 🔑 LOGO SIZE FIX */
+    .nav-logo {
+      max-height: 36px;   /* controls navbar logo size */
+      width: auto;
+      object-fit: contain;
+      display: block;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      font-size: 14px;
+    }
+
+    .nav-links a {
+      color: rgba(232, 238, 252, 0.85);
+      text-decoration: none;
+    }
+
+    .nav-links a:hover {
+      color: #ffffff;
+    }
+
+    .nav-btn {
+      padding: 10px 14px;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      background: rgba(255, 255, 255, 0.05);
+      color: #e8eefc;
+      font-weight: 600;
+    }
+
+    .nav-btn:hover {
+      background: rgba(255, 255, 255, 0.10);
+    }
+
+    /* ===== Page center ===== */
+    .page {
+      display: grid;
+      place-items: center;
+      padding: 60px 16px;
+    }
+
+    /* ===== Login card ===== */
+    .card {
+      width: 100%;
+      max-width: 420px;
+      padding: 22px;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+      backdrop-filter: blur(10px);
+    }
+
+    .card-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+
+    .card-logo {
+      width: 40px;
+      height: auto;
+    }
+
+    h1 {
+      font-size: 22px;
+      margin: 0;
+    }
+
+    .sub {
+      margin: 10px 0 18px;
+      font-size: 14px;
+      color: rgba(232, 238, 252, 0.8);
+    }
+
+    label {
+      display: block;
+      font-size: 13px;
+      margin: 12px 0 6px;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      background: rgba(0, 0, 0, 0.25);
+      color: #e8eefc;
+      outline: none;
+      box-sizing: border-box;
+    }
+
+    input:focus {
+      border-color: rgba(64, 150, 255, 0.65);
+    }
+
+    .row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 13px;
+      margin-top: 10px;
+      color: rgba(232, 238, 252, 0.75);
+    }
+
+    .row a {
+      color: rgba(232, 238, 252, 0.85);
+      text-decoration: none;
+    }
+
+    .row a:hover {
+      color: #fff;
+    }
+
+    .btn {
+      width: 100%;
+      margin-top: 16px;
+      padding: 12px;
+      border-radius: 14px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      background: linear-gradient(180deg, #0b5aa8 0%, #0a2d63 100%);
+      color: #fff;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      filter: brightness(1.05);
+    }
+
+    .msg {
+      margin-top: 12px;
+      font-size: 13px;
+      min-height: 18px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ===== Navbar ===== -->
+  <header class="nav">
+    <a href="index.html" class="brand">
+      <img src="Resources/Images/Logo.png" class="nav-logo" alt="CloudMart Logo">
+      <span>CloudMart</span>
+    </a>
+
+    <nav class="nav-links">
+      <a href="index.html">Features</a>
+      <a href="index.html">How it works</a>
+      <a href="index.html">FAQ</a>
+      <a class="nav-btn" href="Signin.html">Sign in</a>
+    </nav>
+  </header>
+
+  <!-- ===== Login ===== -->
+  <main class="page">
+    <section class="card">
+      <div class="card-header">
+        <img src="Resources/Images/Logo.png" class="card-logo" alt="CloudMart Logo">
+        <h1>Sign in</h1>
+      </div>
+
+      <p class="sub">
+        Enter your username and password to continue.
+        (Front-end demo login)
+      </p>
+
+      <label>Username</label>
+      <input id="username" type="text" placeholder="admin">
+
+      <label>Password</label>
+      <input id="password" type="password" placeholder="1234">
+
+      <div class="row">
+        <span>Demo: admin / 1234</span>
+        <a href="#">Forgot password?</a>
+      </div>
+
+      <button class="btn" id="loginBtn">Sign in</button>
+
+      <div class="msg" id="message"></div>
+    </section>
+  </main>
+
+  <script>
+    const CORRECT_USER = "admin";
+    const CORRECT_PASS = "1234";
+
+    document.getElementById("loginBtn").addEventListener("click", function () {
+      const user = document.getElementById("username").value.trim();
+      const pass = document.getElementById("password").value;
+
+      document.getElementById("message").innerText =
+        user === CORRECT_USER && pass === CORRECT_PASS
+          ? "Login successful!"
+          : "Invalid login.";
+    });
+  </script>
+
+</body>
+</html>
