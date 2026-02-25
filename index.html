@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Prototype Home</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Top nav -->
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="#">
+        <span class="logo" aria-hidden="true">⚡</span>
+        <span>CloudMart</span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu">
+        ☰
+        <span class="sr-only">Open menu</span>
+      </button>
+
+      <nav class="nav-menu" id="navMenu">
+        <a href="#features">Features</a>
+        <a href="#how">How it works</a>
+        <a href="#faq">FAQ</a>
+        <a class="btn btn-outline" href="#signin">Sign in</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <h1>A simple prototype homepage.</h1>
+          <p>
+           This is a prototype
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#get-started">Get Started</a>
+            <button class="btn btn-ghost" id="demoToast">See demo interaction</button>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat">
+              <div class="stat-num">Box 1</div>
+              <div class="stat-label">This is a prototype</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num">Box 2</div>
+              <div class="stat-label">This is a prototype</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num">Box 3</div>
+              <div class="stat-label">This is a prototype</div>
+            </div>
+          </div>
+        </div>
+
+       
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="section" id="features">
+      <div class="container">
+        <div class="section-head">
+          <h2>Features</h2>
+          <p class="muted">Three simple cards you can swap out for your project requirements.</p>
+        </div>
+
+        <div class="grid-3">
+          <article class="feature-card">
+            <h3>Box 1</h3>
+            <p class="muted">Section 1</p>
+          </article>
+          <article class="feature-card">
+            <h3>Box 2</h3>
+            <p class="muted">Section 2</p>
+          </article>
+          <article class="feature-card">
+            <h3>Box 3</h3>
+            <p class="muted">Section 3</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section class="section alt" id="how">
+      <div class="container">
+        <div class="section-head">
+          <h2>How it works</h2>
+          <p class="muted">This is a prototype.</p>
+        </div>
+
+        <ol class="steps">
+          <li><span class="step-num">1</span> brand name + colors</li>
+          <li><span class="step-num">2</span> Replace section text </li>
+          <li><span class="step-num">3</span> Will Add links and images</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section alt" id="faq">
+      <div class="container">
+        <div class="section-head">
+          <h2>FAQ</h2>
+          <p class="muted">This is a prototype </p>
+        </div>
+
+        <div class="faq">
+          <button class="faq-q" aria-expanded="false">
+            This is a prototype
+            <span class="chev" aria-hidden="true">▾</span>
+          </button>
+          <div class="faq-a">
+            This is a prototype
+          </div>
+
+          <button class="faq-q" aria-expanded="false">
+            This is a prototype
+            <span class="chev" aria-hidden="true">▾</span>
+          </button>
+          <div class="faq-a">
+            This is a prototype
+          </div>
+
+          <button class="faq-q" aria-expanded="false">
+            This is a prototype
+            <span class="chev" aria-hidden="true">▾</span>
+          </button>
+          <div class="faq-a">
+            This is a prototype
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer" id="get-started">
+      <div class="container footer-grid">
+        <div>
+          <div class="brand footer-brand">
+            <span class="logo" aria-hidden="true">⚡</span>
+            <span>CloudMart</span>
+          </div>
+          <p class="muted">Prototype homepage for HTML/CSS/JS projects.</p>
+        </div>
+
+        <div class="footer-links">
+          <a href="#features">Features</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#faq">FAQ</a>
+        </div>
+
+        <div class="footer-cta">
+          <p class="muted">This is a prototype</p>
+          <a class="btn btn-primary" href="#">Contact</a>
+        </div>
+      </div>
+
+      <div class="container footer-bottom">
+        <small class="muted">© <span id="year"></span> CloudMart. All rights reserved.</small>
+      </div>
+    </footer>
+
+    <!-- Toast -->
+    <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true">
+       Prototype works!
+    </div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
