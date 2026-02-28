@@ -54,7 +54,7 @@ body {
 }
 
 .brand {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   gap: 10px;
   font-weight: 800;
@@ -64,13 +64,10 @@ body {
 }
 
 .logo {
-  width: 34px;
-  height: 34px;
-  display: grid;
-  place-items: center;
-  border-radius: 10px;
-  background: linear-gradient(135deg, var(--accent), #0ea5e9);
-  box-shadow: var(--shadow);
+  height: 40px;      
+  width: auto;
+  display: block;    
+  object-fit: contain;
 }
 
 .nav-menu {
