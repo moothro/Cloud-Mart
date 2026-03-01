@@ -3,11 +3,13 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Prototype Home</title>
+  <title>CloudMart Prototype</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
-  <!-- Top nav -->
+
+  <!-- Top Navigation -->
   <header class="site-header">
     <div class="container nav">
       <a class="brand" href="#">
@@ -15,51 +17,115 @@
         <span>CloudMart</span>
       </a>
 
-      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu">
+      <button class="nav-toggle" id="navToggle">
         ☰
-        <span class="sr-only">Open menu</span>
       </button>
 
       <nav class="nav-menu" id="navMenu">
-        <a href="#features">WishList</a>
+        <a href="#products">Products</a>
+        <a href="#seller">Sellers</a>
+        <a href="#features">Wishlist</a>
         <a class="btn btn-outline" href="#signin">Sign in</a>
       </nav>
     </div>
   </header>
 
   <main>
-    <!-- Hero -->
+
+    <!-- Hero Section -->
     <section class="hero">
       <div class="container hero-grid">
         <div class="hero-copy">
-          <h1>Welcom to CLoudmart</h1>
+          <h1>Welcome to CloudMart</h1>
           <p>
-           CloudMart is Hampton University’s campus marketplace where students securely buy, sell, and discover items in one place—fast browsing, verified accounts, and a simple checkout experience.
+            CloudMart is Hampton University’s campus marketplace where students
+            securely buy, sell, and discover items in one place.
           </p>
 
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#get-started">Get Started</a>
+            <a class="btn btn-primary" href="#products">Browse Products</a>
             <button class="btn btn-ghost" id="demoToast">See demo interaction</button>
           </div>
 
           <div class="hero-stats">
             <div class="stat">
-              <div class="stat-num">Box 1</div>
-              <div class="stat-label">This is a prototype</div>
+              <div class="stat-num">Prototype</div>
+              <div class="stat-label">Marketplace UI</div>
             </div>
             <div class="stat">
-              <div class="stat-num">Box 2</div>
-              <div class="stat-label">This is a prototype</div>
+              <div class="stat-num">Student</div>
+              <div class="stat-label">Only Access</div>
             </div>
             <div class="stat">
-              <div class="stat-num">Box 3</div>
-              <div class="stat-label">This is a prototype</div>
+              <div class="stat-num">Secure</div>
+              <div class="stat-label">Listings</div>
             </div>
           </div>
         </div>
+      </div>
+    </section>
 
-       
+    <!-- Products Section -->
+    <section class="section" id="products">
+      <div class="container">
+        <div class="section-head">
+          <h2>Products</h2>
+          <p class="muted">Browse items listed by Hampton University students.</p>
+        </div>
 
+        <div class="grid-3">
+          <article class="product-card">
+            <img src="placeholder.png" class="product-img" alt="Product">
+            <h3>CSC 405 Textbook</h3>
+            <p class="muted">$45 • Like new</p>
+            <a href="#seller" class="btn btn-outline">View Seller</a>
+          </article>
+
+          <article class="product-card">
+            <img src="placeholder.png" class="product-img" alt="Product">
+            <h3>Mini Fridge</h3>
+            <p class="muted">$80 • Good condition</p>
+            <a href="#seller" class="btn btn-outline">View Seller</a>
+          </article>
+
+          <article class="product-card">
+            <img src="placeholder.png" class="product-img" alt="Product">
+            <h3>Scientific Calculator</h3>
+            <p class="muted">$20 • Fully functional</p>
+            <a href="#seller" class="btn btn-outline">View Seller</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seller Section -->
+    <section class="section alt" id="seller">
+      <div class="container">
+        <div class="section-head">
+          <h2>Seller Profile</h2>
+          <p class="muted">All listings from this seller.</p>
+        </div>
+
+        <div class="seller-info">
+          <h3>Seller: John Doe</h3>
+          <p class="muted">Verified Hampton University Student</p>
+        </div>
+
+        <div class="grid-3">
+          <article class="product-card">
+            <h4>CSC 405 Textbook</h4>
+            <p class="muted">$45</p>
+          </article>
+
+          <article class="product-card">
+            <h4>Calculator</h4>
+            <p class="muted">$20</p>
+          </article>
+
+          <article class="product-card">
+            <h4>Desk Lamp</h4>
+            <p class="muted">$15</p>
+          </article>
         </div>
       </div>
     </section>
@@ -69,69 +135,51 @@
       <div class="container">
         <div class="section-head">
           <h2>Features</h2>
-          <p class="muted">Three simple cards you can swap out for your project requirements.</p>
         </div>
 
         <div class="grid-3">
           <article class="feature-card">
-            <h3>Verified Student Access:</h3>
-            <p class="muted">Secure login using Hampton University email ensures a trusted, campus-only marketplace.</p>
+            <h3>Verified Student Access</h3>
+            <p class="muted">Secure login using Hampton email.</p>
           </article>
+
           <article class="feature-card">
-            <h3>Listing Management:</h3>
-            <p class="muted"> Create, edit, and manage product listings with descriptions, pricing, and contact preferences.</p>
+            <h3>Listing Management</h3>
+            <p class="muted">Create, edit, and manage listings.</p>
           </article>
+
           <article class="feature-card">
-            <h3>Wishlist Tracking:</h3>
-            <p class="muted">Save items to revisit later and monitor availability before purchasing.</p>
+            <h3>Wishlist Tracking</h3>
+            <p class="muted">Save items to revisit later.</p>
           </article>
         </div>
       </div>
     </section>
-
-    <!-- Wishlist -->
-    <section class="section alt" id="how">
-      <div class="container">
-        <div class="section-head">
-          <h2>Wishlist</h2>
-          <p class="muted">Welcome to the Wishlist</p>
-        </div>
-
-        <p>Brand name + colors</p>
-        <p>Replace section text</p>
-        <p>Add links and images</p>
-      </div>
-    </section>
-
 
     <!-- Footer -->
-    <footer class="site-footer" id="get-started">
+    <footer class="site-footer">
       <div class="container footer-grid">
         <div>
-          <div class="brand footer-brand">
-            <span class="logo" aria-hidden="true">⚡</span>
-            <span>CloudMart</span>
-          </div>
-          <p class="muted">A marketplace for hampton students</p>
+          <strong>CloudMart</strong>
+          <p class="muted">A marketplace for Hampton University students.</p>
         </div>
 
-
         <div class="footer-cta">
-          <p class="muted">This is a prototype</p>
+          <p class="muted">Prototype version</p>
           <a class="btn btn-primary" href="#">Contact</a>
         </div>
       </div>
 
       <div class="container footer-bottom">
-        <small class="muted">© <span id="year"></span> CloudMart. All rights reserved.</small>
+        <small class="muted">© 2026 CloudMart. All rights reserved.</small>
       </div>
     </footer>
 
     <!-- Toast -->
-    <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true">
-       Prototype works!
-    </div>
+    <div class="toast" id="toast">Prototype works!</div>
+
   </main>
+
   <script src="script.js"></script>
 </body>
 </html>
