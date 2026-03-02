@@ -3,179 +3,114 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Prototype Home</title>
+  <title>CloudMart Marketplace</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
-  <!-- Top nav -->
+
+  <!-- Top Navigation -->
   <header class="site-header">
     <div class="container nav">
       <a class="brand" href="#">
-        <span class="logo" aria-hidden="true">⚡</span>
+        <img
+          src="https://cloudmart-images.s3.us-east-2.amazonaws.com/Logo.png"
+          alt="CloudMart Logo"
+          class="logo"
+        />
         <span>CloudMart</span>
       </a>
 
-      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu">
-        ☰
-        <span class="sr-only">Open menu</span>
-      </button>
-
-      <nav class="nav-menu" id="navMenu">
-        <a href="#features">Features</a>
-        <a href="#how">How it works</a>
-        <a href="#faq">FAQ</a>
-        <a class="btn btn-outline" href="#signin">Sign in</a>
+      <nav class="nav-menu">
+        <a href="#wishlist">Wishlist</a>
+        <a href="#profile">Profile</a>
       </nav>
     </div>
   </header>
 
-  <main>
-    <!-- Hero -->
-    <section class="hero">
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <h1>A simple prototype homepage.</h1>
-          <p>
-           This is a prototype
-          </p>
+  <main class="marketplace-layout">
 
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#get-started">Get Started</a>
-            <button class="btn btn-ghost" id="demoToast">See demo interaction</button>
-          </div>
+    <!-- Sidebar Filters -->
+    <aside class="filters">
+      <h3>Marketplace</h3>
 
-          <div class="hero-stats">
-            <div class="stat">
-              <div class="stat-num">Box 1</div>
-              <div class="stat-label">This is a prototype</div>
-            </div>
-            <div class="stat">
-              <div class="stat-num">Box 2</div>
-              <div class="stat-label">This is a prototype</div>
-            </div>
-            <div class="stat">
-              <div class="stat-num">Box 3</div>
-              <div class="stat-label">This is a prototype</div>
-            </div>
-          </div>
-        </div>
+      <input
+        type="text"
+        placeholder="Search listings"
+        class="filter-input"
+      />
 
-       
+      <div class="filter-group">
+        <h4>Category</h4>
+        <label><input type="checkbox" /> Electronics</label>
+        <label><input type="checkbox" /> Books</label>
+        <label><input type="checkbox" /> Furniture</label>
+        <label><input type="checkbox" /> Appliances</label>
+      </div>
 
-        </div>
+      <div class="filter-group">
+        <h4>Price</h4>
+        <label><input type="radio" name="price" /> Under $50</label>
+        <label><input type="radio" name="price" /> $50 – $100</label>
+        <label><input type="radio" name="price" /> $100+</label>
+      </div>
+
+      <button class="btn btn-primary full">Apply Filters</button>
+    </aside>
+
+    <!-- Listings Feed -->
+    <section class="listings">
+      <h2>Today’s Picks</h2>
+
+      <div class="grid-3">
+
+        <!-- CSC 405 Textbook -->
+        <article class="feature-card product-card">
+          <img
+            src="https://cloudmart-images.s3.us-east-2.amazonaws.com/Img.png"
+            class="product-img product-img-small"
+            alt="CSC 405 Textbook"
+          />
+          <h3>CSC 405 Textbook</h3>
+          <p class="muted">$45 • Like new</p>
+          <button class="btn btn-outline full">Add to Wishlist</button>
+        </article>
+
+        <!-- Mini Fridge -->
+        <article class="feature-card product-card">
+          <img
+            src="https://cloudmart-images.s3.us-east-2.amazonaws.com/Calc"
+            class="product-img product-img-small"
+            alt="Mini Fridge"
+          />
+          <h3>Mini Fridge</h3>
+          <p class="muted">$80 • Good condition</p>
+          <button class="btn btn-outline full">Add to Wishlist</button>
+        </article>
+
+        <!-- Calculator -->
+        <article class="feature-card product-card">
+          <img
+            src="https://cloudmart-images.s3.us-east-2.amazonaws.com/Fridge"
+            class="product-img product-img-small"
+            alt="Scientific Calculator"
+          />
+          <h3>Scientific Calculator</h3>
+          <p class="muted">$20 • Fully functional</p>
+          <button class="btn btn-outline full">Add to Wishlist</button>
+        </article>
+
       </div>
     </section>
 
-    <!-- Features -->
-    <section class="section" id="features">
-      <div class="container">
-        <div class="section-head">
-          <h2>Features</h2>
-          <p class="muted">Three simple cards you can swap out for your project requirements.</p>
-        </div>
-
-        <div class="grid-3">
-          <article class="feature-card">
-            <h3>Box 1</h3>
-            <p class="muted">Section 1</p>
-          </article>
-          <article class="feature-card">
-            <h3>Box 2</h3>
-            <p class="muted">Section 2</p>
-          </article>
-          <article class="feature-card">
-            <h3>Box 3</h3>
-            <p class="muted">Section 3</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- How it works -->
-    <section class="section alt" id="how">
-      <div class="container">
-        <div class="section-head">
-          <h2>How it works</h2>
-          <p class="muted">This is a prototype.</p>
-        </div>
-
-        <ol class="steps">
-          <li><span class="step-num">1</span> brand name + colors</li>
-          <li><span class="step-num">2</span> Replace section text </li>
-          <li><span class="step-num">3</span> Will Add links and images</li>
-        </ol>
-      </div>
-    </section>
-
-    <!-- FAQ -->
-    <section class="section alt" id="faq">
-      <div class="container">
-        <div class="section-head">
-          <h2>FAQ</h2>
-          <p class="muted">This is a prototype </p>
-        </div>
-
-        <div class="faq">
-          <button class="faq-q" aria-expanded="false">
-            This is a prototype
-            <span class="chev" aria-hidden="true">▾</span>
-          </button>
-          <div class="faq-a">
-            This is a prototype
-          </div>
-
-          <button class="faq-q" aria-expanded="false">
-            This is a prototype
-            <span class="chev" aria-hidden="true">▾</span>
-          </button>
-          <div class="faq-a">
-            This is a prototype
-          </div>
-
-          <button class="faq-q" aria-expanded="false">
-            This is a prototype
-            <span class="chev" aria-hidden="true">▾</span>
-          </button>
-          <div class="faq-a">
-            This is a prototype
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="site-footer" id="get-started">
-      <div class="container footer-grid">
-        <div>
-          <div class="brand footer-brand">
-            <span class="logo" aria-hidden="true">⚡</span>
-            <span>CloudMart</span>
-          </div>
-          <p class="muted">Prototype homepage for HTML/CSS/JS projects.</p>
-        </div>
-
-        <div class="footer-links">
-          <a href="#features">Features</a>
-          <a href="#pricing">Pricing</a>
-          <a href="#faq">FAQ</a>
-        </div>
-
-        <div class="footer-cta">
-          <p class="muted">This is a prototype</p>
-          <a class="btn btn-primary" href="#">Contact</a>
-        </div>
-      </div>
-
-      <div class="container footer-bottom">
-        <small class="muted">© <span id="year"></span> CloudMart. All rights reserved.</small>
-      </div>
-    </footer>
-
-    <!-- Toast -->
-    <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true">
-       Prototype works!
-    </div>
   </main>
-  <script src="script.js"></script>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-bottom">
+      <small class="muted">© 2026 CloudMart. All rights reserved.</small>
+    </div>
+  </footer>
+
 </body>
 </html>
