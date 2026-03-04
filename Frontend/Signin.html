@@ -193,7 +193,7 @@
   <!-- ===== Navbar ===== -->
   <header class="nav">
     <a href="index.html" class="brand">
-      <img src="Resources/Images/Logo.png" class="nav-logo" alt="CloudMart Logo">
+      <img src="https://cloudmart-images.s3.us-east-2.amazonaws.com/Logo.png" class="nav-logo" alt="CloudMart Logo">
       <span>CloudMart</span>
     </a>
 
@@ -209,7 +209,7 @@
   <main class="page">
     <section class="card">
       <div class="card-header">
-        <img src="Resources/Images/Logo.png" class="card-logo" alt="CloudMart Logo">
+        <img src="https://cloudmart-images.s3.us-east-2.amazonaws.com/Logo.png" class="card-logo" alt="CloudMart Logo">
         <h1 id="modeTitle">Sign in</h1>
       </div>
 
@@ -219,8 +219,8 @@
 
       <!-- Email only needed for Create Account -->
       <div id="emailWrap" style="display:none;">
-        <label>Email (must be @my.hamptonu.edu)</label>
-        <input id="email" type="email" placeholder="nick@my.hamptonu.edu">
+        <label>Email (must be @hamptonu.edu)</label>
+        <input id="email" type="email" placeholder="...@hamptonu.edu">
       </div>
 
       <label>Username</label>
@@ -276,7 +276,7 @@
 
     function validHamptonEmail(email) {
       // strict: must end exactly with @my.hamptonu.edu
-      return typeof email === "string" && email.toLowerCase().endsWith("@my.hamptonu.edu");
+      return typeof email === "string" && email.toLowerCase().endsWith("hamptonu.edu");
     }
 
     function toggleUI() {
@@ -288,7 +288,7 @@
         emailWrap.style.display = "block";
         primaryBtn.innerText = "Create account";
         toggleMode.innerText = "Already have an account? Sign in";
-        hintText.innerText = "Email must be @my.hamptonu.edu";
+        hintText.innerText = "Email must be @hamptonu.edu";
         setMsg("");
       } else {
         modeTitle.innerText = "Sign in";
@@ -331,7 +331,7 @@
           return;
         }
         if (!validHamptonEmail(email)) {
-          setMsg("Email must end with @my.hamptonu.edu.");
+          setMsg("Email must end with @hamptonu.edu.");
           return;
         }
 
